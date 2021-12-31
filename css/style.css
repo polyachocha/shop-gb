@@ -8,6 +8,11 @@
     --black-title: #000000;
     --green-text: #5D5D5D;
     --pink-bth: #FF6A6A;
+    --black-bcg: #222224;
+    --white-text: #FBFBFB;
+    --gray-form: #E1E1E1;
+    --color-card: #3A3838;
+    --pink-focus: #E05C6E;
 }
 
 body {
@@ -79,6 +84,16 @@ body {
     display: flex;
     align-items: center;
     padding: 0 0 0 92px;
+    position: relative;
+}
+
+.brand__title-wrp::before {
+    content: '';
+    width: 12px;
+    height: 92px;
+    background-color: var(--pink-color);
+    position: absolute;
+    left: 70px;
 }
 
 .brand__title {
@@ -182,6 +197,39 @@ body {
     flex-direction: column;
     background-color: var(--green-bcg);
     margin: 30px 0 0 0;
+    position: relative;
+}
+
+.overlay {
+    width: 360px;
+    min-height: 420px;
+    background-color: var(--color-card);
+    opacity: 86%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.products__item-btn {
+    position: absolute;
+    top: 38%;
+    left: 48%;
+    width: 138px;
+    height: 43px;
+    transform: translate(-38%, -48%);
+    background: url(../img/basket.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    border: 1px solid #FFFFFF;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--white);
+    display: none;
+}
+
+.products__item:hover .overlay,
+.products__item:hover .products__item-btn {
+    display: block;
 }
 
 .products__item-title {
@@ -209,6 +257,11 @@ body {
 }
 
 .products__btn {
+    text-align: center;
+    padding: 31px 0 0 0;
+}
+
+.products__btn_link {
     border: 1px solid var(--pink-bth);
     margin: 49px 0 96px 0;
     color: var(--pink-bth);
@@ -217,4 +270,168 @@ body {
     height: 47px;
     text-align: center;
     padding: 15px 39px;
+}
+
+.products__btn_link:hover,
+.products__btn_link:active,
+.products__btn_link:focus {
+    background-color: var(--pink-color);
+    color: var(--white)
+}
+
+.advantages {
+    background-color: var(--black-bcg);
+    width: 100%;
+    min-height: 341px;
+    margin: 96px 0 0 0;
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 341px;
+}
+
+.advantages__item {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 360px;
+    flex-direction: column;
+}
+
+.advantages__item-title {
+    color: var(--white-text);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 25px 0 0 0;
+}
+
+.advantages__item-text {
+    color: var(--white-text);
+    font-weight: 300;
+    line-height: 17px;
+    padding: 16px 0 0 0;
+}
+
+.footer__quoteform {
+    width: 100%;
+    min-height: 448px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__bck {
+    background-image: url(../img/bck-footer.jpg);
+    width: 100%;
+    background-size: cover;
+}
+
+.footer__quote-wrp {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 360px;
+}
+
+.footer__form-wrp {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 557px;
+}
+
+.footer__quote-img {
+    width: 96px;
+    height: 96px;
+}
+
+.footer__quote-text {
+    width: 360px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--black-bcg);
+    padding: 30px 0 0 0;
+}
+
+.footer__form-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--black-bcg);
+    display: block;
+    width: 557px;
+}
+
+.footer__form-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: var(--black-bcg);
+    display: block;
+    width: 557px;
+}
+
+.footer__form-form {
+    display: flex;
+    width: 360px;
+    padding: 32px 0 0 0;
+    justify-content: center;
+}
+
+.footer__form-input {
+    width: 256px;
+    min-height: 49px;
+    background-color: var(--gray-form);
+    border-radius: 31px 0 0 31px;
+    border: none;
+    padding: 0 0 0 22px;
+    color: var(--black-bcg);
+}
+
+.footer__form-btn {
+    width: 100px;
+    min-height: 49px;
+    background-color: var(--pink-color);
+    border: none;
+    border-radius: 0 31px 31px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.footer__form-btn:hover,
+.footer__form-btn:active,
+.footer__form-btn:focus {
+    background-color: var(--pink-focus);
+}
+
+.footer__bckcolor {
+    background-color: var(--black-bcg);
+    background-size: cover;
+    width: 100%;
+}
+
+.footer__developer {
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__developer-text {
+    color: var(--white-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.footer__developer-list {
+    display: flex;
 }
