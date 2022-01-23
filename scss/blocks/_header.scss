@@ -100,12 +100,22 @@
     top: 100%;
     background-color: $white;
     display: none;
+    z-index: 2;
+}
+
+.header__nav-list {
+    padding: 0;
+}
+
+.nav-sub-item__list {
+    padding: 0;
 }
 
 .header__nav-title {
     width: 55px;
     min-height: 17px;
     color: $black-title;
+    font-size: 14px;
     font-weight: 700;
     line-height: 17px;
     text-transform: uppercase;
@@ -114,5 +124,9 @@
 
 .header__menu-btn:hover+.header__nav,
 .header__menu-btn:focus+.header__nav {
+    display: block;
+}
+
+.header__nav:hover+.header__nav {
     display: block;
 }
